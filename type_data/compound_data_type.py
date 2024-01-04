@@ -2,7 +2,7 @@
 In addition to strings, numbers and booleans. There're other type of data that can store a var.
 These are:
     lists > Can store differents values with diferent type of data at the same time.
-    tupla > Same as lists but these are CONST.
+    tuple > Same as lists but these are CONST.
     set > Same as tuplas but there are no index available, and can not store duplicated values.
     dictionary > Same as a .json file
 '''
