@@ -47,3 +47,16 @@ for num in enumerate(numbers): # Enumerate creates a tuple
 
 for i,num in enumerate(numbers):
     print(f'Index > {i}, value > {num}')
+
+# A string is also a list, so it can be iterated
+
+english_idiom = 'Kill two birds with the same stone'
+
+for letter in english_idiom:
+    if ' ' == letter:
+        continue
+    print(letter)
+
+# One-line for loop
+
+print([x*2 for x in numbers])
