@@ -31,15 +31,15 @@ print('The difference of this course with the... \n- quickest is of: {0}h \n- sl
 TOTAL_AUDIOVISUAL_THIS_COURSE = 3.5
 TOTAL_AUDIOVISUAL_AVERAGE_COURSES = 5
 
-percentatge_useless_content_this_course = TOTAL_AUDIOVISUAL_THIS_COURSE - ACTUAL_COURSE_H // TOTAL_AUDIOVISUAL_THIS_COURSE # the value needs to be multiplied by 100 in order to be a percentatge
-percentatge_useless_content_average_courses = TOTAL_AUDIOVISUAL_AVERAGE_COURSES - AVERAGE_COURSE_H // TOTAL_AUDIOVISUAL_AVERAGE_COURSES 
+percentatge_useless_content_this_course = round((TOTAL_AUDIOVISUAL_THIS_COURSE - ACTUAL_COURSE_H) / TOTAL_AUDIOVISUAL_THIS_COURSE * 100, 2) # the value needs to be multiplied by 100 in order to be a percentatge
+percentatge_useless_content_average_courses = round((TOTAL_AUDIOVISUAL_AVERAGE_COURSES - AVERAGE_COURSE_H) / TOTAL_AUDIOVISUAL_AVERAGE_COURSES * 100, 2) 
 
 
-print('The percentatge of useless audiovisual content is: {}% in this course\n {}% in the average course'.format(percentatge_useless_content_this_course * 10, percentatge_useless_content_average_courses * 10))
+print('The percentatge of useless audiovisual content is:\n - {}% in this course\n - {}% in the average course'.format(percentatge_useless_content_this_course, percentatge_useless_content_average_courses))
 
 
 # C
 
 HOURS_EQUIVALENCE = 10
 
-print(f"Watching 10h of Dalton's course, equals to {HOURS_EQUIVALENCE * AVERAGE_COURSE_H // ACTUAL_COURSE_H}h of the average course and watching 10h of the average course, equals to {HOURS_EQUIVALENCE * ACTUAL_COURSE_H // AVERAGE_COURSE_H}h of the Dalton's course")
+print(f"Watching 10h of Dalton's course, equals to {round(HOURS_EQUIVALENCE * AVERAGE_COURSE_H / ACTUAL_COURSE_H, 2)}h of the average course and watching 10h of the average course, equals to {round(HOURS_EQUIVALENCE * ACTUAL_COURSE_H // AVERAGE_COURSE_H, 2)}h of the Dalton's course")
