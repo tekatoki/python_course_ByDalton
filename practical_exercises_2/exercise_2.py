@@ -12,42 +12,54 @@ B) The oldest is the teacher and the youngest is the assistant. How old
 are both the teacher and assistant?
 '''
 
-'''
-def int_list(list):
-    t = 0
-    for i in list:
-        list.insert(int(i), t)
-        t += 1
-    return list
-'''
 
-def assign_rol(int_array_iterable: list):
+def a_part (list_students : list):
+    list_students.sort(key = lambda x:x[0], reverse = True) # Only x is int value of each object tuple
+
+    print('The order of the ages of classmates are:')
+    
+    for i in list_students: # Output for the sorted algorithm
+        print(f'- {i[1]} is {i[0]} years old')  
+
+def combine_data (iterable_1 : list, iterable_2 : list):
+    t = 0
+    list_return = []
+    for i in iterable_1:
+        list_return.append((int(iterable_1[t]), iterable_2[t]))
+        t += 1
+    return list_return
+
+def assign_rol(tuple_array_iterable: list):
     '''
     This functions assigns a rol to the highest and lowest number
-    of a given list of integres values. 
+    of a given list of integres values.
+    The function espects that the iterable objects of the array 
+    are tuples. 
     '''
-    int_array_iterable.sort(reverse=True)
 
-    high_rol = int_array_iterable[0]
-    low_rol = int_array_iterable[-1]
+    tuple_array_iterable.sort(key = lambda x:x[0], reverse=True)
+
+    high_rol = tuple_array_iterable[0]
+    low_rol = tuple_array_iterable[-1]
 
     return high_rol, low_rol 
 
+
 if __name__ == '__main__':
 
-    input = input('Introduce the age of each student, separate with a spacebar>')
-    input = input.split()   
-    list_student_ages = [int(i) for i in input]
+    input_ages = input('Introduce the age of each student, separate with a spacebar>')
+    input_ages = input_ages.split()
+    
+    input_names = input('Introduce the names with the same order>')
+    input_names = input_names.split()
 
+    list_students = combine_data(input_ages, input_names)
+
+    print('\n')
+    
     # A
-    list_student_ages.sort(reverse = True)
-
-    # Output
-    print(f'The order of ages of the classmates are:{list_student_ages}')
+    a_part(list_students)
 
     # B
-
-    teacher_age, assistant_age = assign_rol(list_student_ages)
-
-    # Output
-    print(f'The teacher is {teacher_age} years old and the assistant is {assistant_age} years old')    
+    teacher_info, assistant_info = assign_rol(list_students)
+    print(f'\nThe teacher is {teacher_info[1]} and the assistant is {assistant_info[1]}\n') # Output_b  
