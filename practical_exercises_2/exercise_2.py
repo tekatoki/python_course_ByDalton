@@ -33,7 +33,7 @@ def assign_rol(tuple_array_iterable: list):
     '''
     This functions assigns a rol to the highest and lowest number
     of a given list of integres values.
-    The function espects that the iterable objects of the array 
+    The function expects that the iterable objects inside the array 
     are tuples. 
     '''
 
