@@ -1,8 +1,10 @@
 '''
-Problem statement:
+This code is not the what was asked for in the second problem. Nevertheless it is also a good resolution of the following problem statement:
 
-Create a function that returns the prime numbers
-between 0 and the argument you insert on the terminal
+Make a code that prints all the prime numbers divisible for a number introduced by the user.
+
+*** The resolution of the problem also allows to the programmer to choose whether to print in the CLI only prime divisibles or all the divisibles
+only by changing a parametre of a function.
 '''
 
 
