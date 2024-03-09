@@ -1,5 +1,5 @@
 '''
-This file is my resolotion of the following exercise statement:
+This file is my resolution of the following exercise statement:
     Print the following data:
         a. Difference between the actual course (1.5h) and...
             - The quickest of the other courses (2.5h) 
